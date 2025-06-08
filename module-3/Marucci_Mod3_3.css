@@ -1,0 +1,51 @@
+/* 
+  Author: Justin Marucci
+  Assignment: 3.3
+  Date: 06/08/2025
+*/
+
+
+
+
+/* Center the main h1 title */
+h1 {
+  text-align: center;
+}
+
+/* Set h3 font weight */
+h3 {
+  font-weight: 500;
+}
+
+/* Set list item font weight */
+ol, ul {
+  font-weight: 300;
+}
+
+/* Style ordered list and h3 */
+ol, ol + h3, h3 + ol {
+  border: 1px solid red;
+  border-radius: 15px;
+  padding: 10px;
+  list-style-position: inside;
+}
+
+/* Style unordered list and h3 */
+ul, ul + h3, h3 + ul {
+  border: 1px dashed red;
+  border-radius: 15px;
+  padding: 10px;
+  list-style-type: upper-roman;
+  list-style-position: inside;
+}
+
+/* Bottom div link styling */
+div[style*="margin-top"] {
+  float: right;
+  margin-bottom: 20px;
+}
+
+/* Hover effect for all links */
+a:hover {
+  text-decoration: underline;
+}

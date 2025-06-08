@@ -1,0 +1,44 @@
+/* 
+  Author: Justin Marucci
+  Assignment: 3.2
+  Date: 06/08/2025
+*/
+
+
+
+
+
+/* Import Google Fonts (optional) */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
+
+body {
+  font-family: Arial, sans-serif; /* Or 'Roboto', sans-serif if you imported it */
+}
+
+#container {
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+/* Header styles */
+h1, h2, h3, h4 {
+  background-color: #333366;
+  color: #FFFFFF;
+  border: 1px solid #D6A800;
+  padding: 10px;
+}
+
+/* Anchor tag styles */
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #004999;
+}
+
+a:visited {
+  color: #663399;
+}
