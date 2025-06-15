@@ -1,0 +1,62 @@
+/* Justin Marucci */
+/*Assignment 4 */
+/* 06/15/2025 */
+
+
+/* Center the main heading */
+h1 {
+    text-align: center;
+}
+
+/* Container for the whole page */
+#container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Image gallery container with a border around all three books */
+#image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 10%;
+    border: 2px solid black; 
+    padding: 20px;
+}
+
+/* Add vertical dividing lines between the books */
+#image-gallery > div {
+    padding: 0 20px;
+}
+
+/* Add right border to first two divs as vertical separators */
+#image-gallery > div:not(:last-child) {
+    border-right: 2px solid black;
+}
+
+/* Center titles above each image */
+#image-gallery h3 {
+    text-align: center;
+}
+
+/* Center the figure content */
+#image-gallery figure {
+    text-align: center;
+    margin: 0;
+}
+
+/* Style the figcaption text */
+#image-gallery figcaption {
+    font-style: italic;
+    font-size: 0.75em;
+    margin-top: 5px;
+}
+
+/* Resize the images */
+#image-gallery img {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
