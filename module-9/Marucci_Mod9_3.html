@@ -1,0 +1,43 @@
+<!-- Justin Maruccci -->
+<!-- Assignment 9-->
+<!-- 07/06/2025-->
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  Justin Marucci
+  Assignment 9.3
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <script>
+    var wordOne = "fellowship";
+    var wordTwo = "precious";
+    var wordThree = "hope";
+    var wordFour = "shadow";
+  </script>
+</head>
+
+<body>
+  <h1>Assignment 9.3: JavaScript - Part 1</h1>
+
+  <p>
+   The Council of Elrond gathered in Rivendell to decide the fate of the One Ring. After much debate, a <span id="wordOne">_________</span> was formed: nine companions set forth on a perilous journey to destroy it in the fires of Mount Doom.
+  </p>
+
+  <p>
+    In the dark caves beneath the Misty Mountains, Gollum cradled the Ring, muttering to himself. “My <span id="wordTwo">_________</span>,” he hissed, lost in obsession. Little did he know, fate had already set other plans in motion.
+  </p>
+
+  <p>
+    As they neared Mordor, despair crept into their hearts. But Sam turned to Frodo and said, “There’s some good in this world, Mr. Frodo, and it’s worth fighting for.” In the darkest times, <span id="wordThree">_________</span> was the flame that kept them going—even as the land fell deeper into <span id="wordFour">_________</span>.
+  </p>
+
+  <p>
+    <button type="button" onclick="document.getElementById('wordOne').innerHTML = wordOne">Reveal Fellowship</button>
+    <button type="button" onclick="document.getElementById('wordTwo').innerHTML = wordTwo">Reveal Precious</button>
+    <button type="button" onclick="document.getElementById('wordThree').innerHTML = wordThree">Reveal Hope</button>
+    <button type="button" onclick="document.getElementById('wordFour').innerHTML = wordFour">Reveal Shadow</button>
+  </p>
+</body>
+</html>
