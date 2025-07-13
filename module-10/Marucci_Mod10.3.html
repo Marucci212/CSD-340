@@ -1,0 +1,79 @@
+<!-- 
+  Justin Marucci
+  Assignment 10
+  07/13/2025 
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+    }
+    div {
+      margin-bottom: 20px; 
+    }
+    img {
+      border: 0; /* Remove default image border */
+      width: 300px; /* Set a consistent width for the images */
+      height: auto; /* Maintain aspect ratio */
+      cursor: pointer; /* Indicate that the image is clickable */
+    }
+    .hover-text {
+      color: black; /* Default text color */
+      transition: color 0.3s; 
+    }
+  </style>
+  <script>
+    function imageClicked(teamName) {
+      alert("You clicked on the " + teamName + " image!");
+    }
+  </script>
+</head>
+<body>
+
+  <h1>Assignment 10.3: JavaScript - Part 2</h1>
+
+  <div>
+    <a href="#"
+       onmouseover="document.steelers.src='img/steelers_hover.jpg';"
+       onmouseout="document.steelers.src='img/steelers_normal.jpg';"
+    >
+      <img name="steelers" src="img/steelers_normal.jpg" alt="Pittsburgh Steelers Image" onclick="imageClicked('Pittsburgh Steelers')" />
+    </a>
+  </div>
+  <div class="hover-text"
+       onmouseover="this.style.color='red';"
+       onmouseout="this.style.color='black';">
+    Here We Go Steelers!
+  </div>
+
+  <hr>
+
+  <div>
+    <a href="#"
+       onmouseover="document.yankees.src='img/yankees_hover.jpg';"
+       onmouseout="document.yankees.src='img/yankees_normal.jpg';"
+    >
+      <img name="yankees" src="img/yankees_normal.jpg" alt="New York Yankees Image" onclick="imageClicked('New York Yankees')" />
+    </a>
+  </div>
+  <div class="hover-text"
+       onmouseover="this.style.color='red';"
+       onmouseout="this.style.color='black';">
+    Go Yankees!
+    <br />
+    Right-click and select View Source for more details.
+  </div>
+
+</body>
+</html>
