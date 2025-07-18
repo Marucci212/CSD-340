@@ -1,0 +1,103 @@
+<!-- 
+  Justin Marucci
+  Assignment 11.2
+  07/16/2025 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      color: #333;
+    }
+    .controls {
+      margin-top: 20px;
+    }
+    input[type="text"] {
+      padding: 8px;
+      width: 300px;
+    }
+    button {
+      margin: 5px;
+      padding: 8px 12px;
+      background-color: #007acc;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005f99;
+    }
+    #displayArea {
+      margin-top: 20px;
+      background-color: #eaeaea;
+      padding: 15px;
+      border-radius: 5px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Assignment 11.2: JavaScript - Part 3</h1>
+  <p>Enter a task in the text box below and click "Add" to add it to the to-do list. Click "Delete Last Entry" to remove the last task. Click "Display" to see all tasks in the list.</p>
+
+  <div class="controls">
+    <input type="text" id="taskInput" placeholder="Enter your task here" />
+    <button onclick="addTask()">Add</button>
+    <button onclick="deleteLastTask()">Delete Last Entry</button>
+    <button onclick="displayTasks()">Display</button>
+  </div>
+
+  <div id="displayArea"></div>
+
+  <script>
+    let tasks = [];
+
+    function addTask() {
+      const input = document.getElementById("taskInput").value.trim();
+      if (input === "") {
+        alert("Please enter a task.");
+        return;
+      }
+      tasks.push(input);
+      alert(`Added: "${input}" at position ${tasks.length}`);
+      document.getElementById("taskInput").value = "";
+    }
+
+    function deleteLastTask() {
+      if (tasks.length === 0) {
+        alert("There are no tasks to delete.");
+        return;
+      }
+      const removed = tasks.pop();
+      alert(`Deleted: "${removed}"`);
+    }
+
+    function displayTasks() {
+      const displayArea = document.getElementById("displayArea");
+      if (tasks.length === 0) {
+        displayArea.textContent = "Your task list is empty.";
+        return;
+      }
+
+      let output = "";
+      for (let i = 0; i < tasks.length; i++) {
+        output += `${i + 1}. ${tasks[i]}\n`;
+      }
+      displayArea.textContent = output;
+    }
+  </script>
+
+</body>
+</html>
