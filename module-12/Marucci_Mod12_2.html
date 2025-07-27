@@ -1,0 +1,135 @@
+  <!-- 
+  Justin Marucci
+  Assignment 12
+  07/24/2025
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #fff;
+    }
+
+    h1 {
+      text-align: center;
+      color: black;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 30px;
+    }
+
+    .box {
+      border: 2px dashed red;
+      padding: 20px;
+      width: 40%;
+    }
+
+    .box h2 {
+      font-weight: bold;
+    }
+
+    button {
+      margin: 10px 5px;
+      padding: 6px 12px;
+      font-size: 14px;
+      border: 1px solid gray;
+      background-color: #f2f2f2;
+      cursor: pointer;
+    }
+
+    ol, ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .back-link a {
+      color: blue;
+      text-decoration: none;
+    }
+
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Assignment 12.2: JavaScript - Part 4</h1>
+
+  <div class="container">
+    <!-- Left: Book List -->
+    <div class="box">
+      <h2>Top 10 Favorite Books</h2>
+      <button onclick="showTopToBottom()">Top to Bottom</button>
+      <button onclick="showBottomToTop()">Bottom to Top</button>
+      <ol id="bookList"></ol>
+    </div>
+
+    <!-- Right: 5 Things Learned -->
+    <div class="box">
+      <h2>5 Things I've Learned Since the Course Started</h2>
+      <ol type="I">
+        <li>JavaScript</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Website Design</li>
+        <li>Write Clean Code</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="back-link">
+    <a href="index.html">Back to Landing Page</a>
+  </div>
+
+  <script>
+    const books = [
+      "The Lord of the Rings",
+      "A Song of Ice and Fire",
+      "The Hobbit",
+      "Dune",
+      "Harry Potter",
+      "Lost in the Clouds",
+      "The Great Gatsby",
+      "Medillin",
+      "Head On",
+      "Queens Boulevard"
+    ];
+
+    function showTopToBottom() {
+      const list = document.getElementById("bookList");
+      list.innerHTML = "";
+      for (let i = 0; i < books.length; i++) {
+        const li = document.createElement("li");
+        li.textContent = books[i];
+        list.appendChild(li);
+      }
+    }
+
+    function showBottomToTop() {
+      const list = document.getElementById("bookList");
+      list.innerHTML = "";
+      for (let i = books.length - 1; i >= 0; i--) {
+        const li = document.createElement("li");
+        li.textContent = books[i];
+        list.appendChild(li);
+      }
+    }
+  </script>
+
+</body>
+</html>
